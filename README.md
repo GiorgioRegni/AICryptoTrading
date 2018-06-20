@@ -22,5 +22,12 @@ To learn more about this image: https://github.com/ufoym/deepo
 
 ### Runnning the code on docker
 
-We prebuilt a Docker image based on ufoym/deepo:all-py27-jupyter that contains the code and 
-the two exchange history csv files.
+The docker image ufoym/deepo:all-py27-jupyter contains all the libraries needed to run either on CPU or GPU.
+To test your code, assuming you checked out the project in your current working directory:
+
+```bash
+docker run -it -p 8888:8888 --ipc=host -v $PWD:/root ufoym/deepo:all-jupyter-py27 jupyter notebook --no-browser --ip=0.0.0.0 --allow-root --NotebookApp.token= --notebook-dir='/root'
+```
+
+This will run a deep learning jupyter notebook on your machine, accessible at port 8888.
+Use your browser to access http://localhost:8888 and open the file crypto_predict.ipynb to get started.
