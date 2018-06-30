@@ -6,7 +6,7 @@ pair = 'BTC_ETH' # or 'USDT_BTC'
 
 CONFIG = {
     'pair': pair,
-    'period': 288,
+    'period': 300,
     'input_size': 30,
     'output_size': 12,
     'lstm_hidden_size': 50,
